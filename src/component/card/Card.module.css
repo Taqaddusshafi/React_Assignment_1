@@ -1,0 +1,41 @@
+.container {
+  background-color: #043463;
+  border-radius: 1em;
+  color: white;
+  width: 50%;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  padding: 1em;
+  margin: 2px;
+  border-bottom: 1px solid white;
+
+}
+
+.value {
+  margin: 2px;
+  padding: 1em;
+ 
+  border-bottom: 1px solid white;
+  
+}
+
+.title {
+  padding: 1em;
+  font-size: large;
+  font-weight: bold;
+}
