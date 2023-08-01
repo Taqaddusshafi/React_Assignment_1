@@ -1,9 +1,4 @@
 # Instructions
-
-- clone this repo and open with your favorite code editor
-
-- make sure you are checked out to `master` branch
-
 - to run the app `npm install` then `npm start`
 
 ## Please fix the following issues
@@ -20,10 +15,6 @@
 
 6.  When user selects an order, can you populate the Card on top of the listing component as shown in the image
 
-![alt text](dashboard.JPG)
+## Fixed the above Mentioned Issues
 
-## Bonus
-
-- run storybook `npm run storybook`
-
-1. Please add storybook to one of the components
+![alt text](dashboardNew.JPG)
