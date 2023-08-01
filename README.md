@@ -1,7 +1,7 @@
 # Instructions
 - to run the app `npm install` then `npm start`
 
-## Please fix the following issues
+## Fixed Blow Mentioned Issues
 
 1.  In the title of the header, it displays `5 orders` but there are `6 orders` in the table. We want to display the `total` number of `orders` in the header title
 
@@ -15,6 +15,6 @@
 
 6.  When user selects an order, can you populate the Card on top of the listing component as shown in the image
 
-## Fixed the above Mentioned Issues
 
-![alt text](dashboardNew.JPG)
+## New Dasboard Image
+![alt text](dashboardNew.jpg)
