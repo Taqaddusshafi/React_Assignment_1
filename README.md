@@ -1,5 +1,7 @@
 # Instructions
+- to clone the app `git clone https://github.com/Taqaddusshafi/React_Assignment_1.git`
 - to run the app `npm install` then `npm start`
+
 
 ## Fixed Blow Mentioned Issues
 
