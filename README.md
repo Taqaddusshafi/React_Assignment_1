@@ -22,4 +22,4 @@
 ![alt text](dashboardNew.jpg)
 
 ## Bonus
-- Added Storybook on Dropdown Menu
+- Added Storybook for Dropdown Menu
