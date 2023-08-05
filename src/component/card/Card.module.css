@@ -3,39 +3,22 @@
   border-radius: 1em;
   color: white;
   width: 50%;
-  padding: 5px;
-  display: flex;
-  flex-direction: column;
-  position: relative;
 }
 
-.row {
-  display: flex;
-}
-
-.column {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.label {
+.cell {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
   padding: 1em;
-  margin: 2px;
-  border-bottom: 1px solid white;
-
-}
-
-.value {
-  margin: 2px;
-  padding: 1em;
- 
-  border-bottom: 1px solid white;
-  
+  background-color: rgba(255, 255, 255, 0.089);
 }
 
 .title {
   padding: 1em;
   font-size: large;
   font-weight: bold;
+}
+
+.value {
+  border-bottom: 1px solid;
 }

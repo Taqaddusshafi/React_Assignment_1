@@ -13,7 +13,6 @@ import List from "../component/list/List";
 import styles from "./Dashboard.module.css";
 import Card from "../component/card/Card";
 
-
 const Dashboard = () => {
   const [currency, setCurrency] = useState("EUR");
   const [searchText, setSearchText] = useState("");
@@ -29,36 +28,21 @@ const Dashboard = () => {
     setFilteredOrders(filtered);
   }, [searchText]);
 
-  const handleSearchTextChange = (text) => {
-    setSearchText(text);
-  };
-
   useEffect(() => {
     if (searchText.trim() === "") {
       setFilteredOrders(mockData.results);
     }
   }, [searchText]);
 
-  const onSelectOrder = (order) => {
-    const selectedOrderDetails = {
-      "Buy/Sell Indicator": order.executionDetails.buySellIndicator,
-      "Order Status": order.executionDetails.orderStatus,
-      "Order Type": order.executionDetails.orderType,
-    };
-  
-    const selectedOrderTimestamps = timestamps.results.find(
-      (item) => item["&id"] === order["&id"]
-    );
-
-    // testing output 
-    console.log("selectedOrderDetails:", selectedOrderDetails);
-    console.log("selectedOrderTimestamps:", selectedOrderTimestamps);
-  
-    
-    setSelectedOrderDetails(selectedOrderDetails);
-    setSelectedOrderTimeStamps(selectedOrderTimestamps.timestamps);
+  const handleSearchTextChange = (text) => {
+    setSearchText(text);
   };
-  const selectedOrderDetailsLabels = [
+
+  const onSelectOrder = (one, two) => {
+    setSelectedOrderDetails(one);
+    setSelectedOrderTimeStamps(two);
+  };
+ /*  const selectedOrderDetailsLabels = [
     "Buy/Sell Indicator",
     "Order Status",
     "Order Type",
@@ -68,17 +52,14 @@ const Dashboard = () => {
     "Order Received",
     "Order Status Updated",
     "Order Submitted",
-  ];
+  ]; */
 
   return (
     <div>
       <div className={styles.header}>
-        <HeaderTitle primaryTitle="Orders" secondaryTitle={`${numofOrders} orders`}/>
+        <HeaderTitle primaryTitle="Orders" secondaryTitle={`${numofOrders} orders`} />
         <div className={styles.actionBox}>
-          <Search
-            value={searchText}
-            onChange={(e) => handleSearchTextChange(e.target.value)}
-          />
+          <Search value={searchText} onChange={(e) => handleSearchTextChange(e.target.value)} />
           <Dropdown
             options={["GBP", "USD", "JPY", "EUR"]}
             onChange={(e) => setCurrency(e.target.value)}
@@ -91,17 +72,18 @@ const Dashboard = () => {
           <Card
             cardData={selectedOrderDetails}
             title="Selected Order Details"
-            labels={selectedOrderDetailsLabels}
+            // labels={selectedOrderDetailsLabels}
           />
           <Card
             cardData={selectedOrderTimeStamps}
             title="Selected Order Timestamps"
-            labels={selectedOrderTimestampsLabels}
+            // labels={selectedOrderTimestampsLabels}
           />
         </div>
-        <List rows={filteredOrders} timestamps={timestamps.results} selectedCurrency={currency} onSelectOrder={onSelectOrder}/>
+        <List rows={filteredOrders} timeStamp={timestamps.results}  selectedCurrency={currency}  onSelectOrder={onSelectOrder} />
       </div>
     </div>
   );
 };
+
 export default Dashboard;

@@ -1,7 +1,7 @@
 import styles from "./ListRow.module.css";
 
 const ListCell = ({ children ,onClick}) => {
-  return <tr className={styles.cell}  onClick={onClick}>{children}</tr>;
+  return <tr onClick={onClick} className={styles.cell}  >{children}</tr>;
 };
 
 export default ListCell;
